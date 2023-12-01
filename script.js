@@ -1,15 +1,15 @@
-let toDoInput; // miejsce gdzie użytkownik wpisuje treść zadania
-let errorInfo; // info o braku zadań/konieczność wpisania tekstu
-let addBtn; // przycisk ADD-dodaje nowy element do listy
-let UlList; // lista zadań, TAGI UL
-let addNewTodos; // nowe <li>
+let toDoInput;
+let errorInfo; 
+let addBtn; 
+let UlList; 
+let addNewTodos;
 
-let popup; // popup
-let popupInfo; // tekst w popupie po próbie dodania pustego elementu
-let toDoToEdit; // edytowany toDo
-let popupInput; // input w popupie
-let popupAddBtn; // przycisk zatwierdzający w popupie
-let popupCloseBtn; // przycisk "anuluj" w popupie
+let popup; 
+let popupInfo;
+let toDoToEdit; 
+let popupInput;
+let popupAddBtn;
+let popupCloseBtn; 
 
 const main = () => {
 	prepareDOMElements();
@@ -44,7 +44,7 @@ const addNewTodo = () => {
 		toDoInput.value = "";
 		errorInfo.textContent = "";
 	} else {
-		errorInfo.textContent = "Wprowadż treść zadania!";
+		errorInfo.textContent = "Enter the task content!";
 	}
 };
 const createToolsArea = () => {
@@ -89,14 +89,14 @@ const changeToDoText = () => {
 		popup.style.display = "none";
 		popupInfo.textContent = "";
 	} else {
-		popupInfo.textContent = "Musisz podać treść!";
+		popupInfo.textContent = "Task content is required!";
 	}
 };
 const deleteTodo = e => {
 	e.target.closest("li").remove();
 	const allToDo = UlList.querySelectorAll("li");
 	if (allToDo.length === 0) {
-		errorInfo.textContent = "Brak zadań na liście";
+		errorInfo.textContent = "No tasks on the list";
 	}
 };
 const checkKeyEnter = e => {
