@@ -44,7 +44,7 @@ const addNewTodo = () => {
 		toDoInput.value = "";
 		errorInfo.textContent = "";
 	} else {
-		errorInfo.textContent = "Enter the task content!";
+		errorInfo.textContent = "Enter the task!";
 	}
 };
 const createToolsArea = () => {
