@@ -28,5 +28,6 @@ Open the index.html file in your web browser to start using the application.
 4.  Delete tasks by clicking on the X icon.
 
  **Special thanks**
+ 
 The application was created during the course JavaScript – The Only Course You Need! from MMC School.
 
